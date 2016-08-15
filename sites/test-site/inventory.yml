@@ -2,7 +2,7 @@
 host_group: coreos-install
 hosts:
 - name: default
-  selectors: {} # no selectors mean all booting hosts match this profile.
+  selectors: {} # no selectors means all booting hosts match this group.
 ---
 host_group: etcd-cluster
 hosts:
