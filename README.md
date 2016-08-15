@@ -1,1 +1,3 @@
 # vaquero
+
+Multi-stage configuration.
