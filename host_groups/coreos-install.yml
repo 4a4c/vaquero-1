@@ -1,0 +1,13 @@
+---
+id: coreos-install
+name: Initial CoreOS Installation
+
+operating_system: coreos-1053.2.0-stable
+
+unattended:
+  type: ignition
+  use: coreos-install.yml
+
+metadata:
+  channel: alpha
+  version: 1109.1.0
