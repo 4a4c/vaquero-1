@@ -1,0 +1,11 @@
+---
+id: centos-net
+name: CentOS 7
+major_version: '7'
+minor_version: '0'
+os_family: CentOS
+release_name: foo
+boot:
+  kernel: "{{.env.centosPxeUrl}}/vmlinuz"
+  initrd:
+  - "{{.env.centosPxeUrl}}/initrd.img"

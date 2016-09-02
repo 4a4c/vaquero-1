@@ -11,4 +11,3 @@ boot:
   - "{{.agent.url}}:{{.agent.port}}/files/coreos_production_pxe_image.cpio.gz"
 cmdline:
   coreos.autologin: ''
-  coreos.first_boot: ''

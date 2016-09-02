@@ -4,9 +4,6 @@ hosts:
 - name: proxy1
   selectors:
     mac: 00:00:00:00:00:04
-- name: proxy2
-  selectors:
-    mac: 00:00:00:00:00:05
 ---
 host_group: etcd-cluster
 hosts:
@@ -31,3 +28,7 @@ hosts:
     ipv4_address: 10.10.10.12
     networkd_address: 10.10.10.12/16
     etcd_name: node3
+---
+- name: centos-install
+  selectors:
+    mac: 00:00:00:00:00:05

@@ -1,0 +1,12 @@
+---
+id: centos
+name: Basic Centos Net Install
+
+operating_system: centos-net
+
+unattended:
+  type: kickstart
+  use: centos-install.ks
+
+metadata:
+  passwdHash: $1$euX8AWyl$tyVi7Hr6HMiJUcEQwrKCP/
