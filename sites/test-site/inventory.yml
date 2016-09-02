@@ -32,7 +32,8 @@ hosts:
     networkd_address: 10.10.10.14/24
     etcd_name: node3
 ---
-- name: centos-install
+host_group: centos
+- name: centos-box
   selectors:
     mac: 00:00:00:00:00:03
 
