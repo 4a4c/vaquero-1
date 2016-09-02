@@ -33,6 +33,7 @@ hosts:
     etcd_name: node3
 ---
 host_group: centos
+hosts:
 - name: centos-box
   selectors:
     mac: 00:00:00:00:00:03
