@@ -1,0 +1,39 @@
+#cloud-config
+
+coreos:
+
+  update:
+    group: stable
+    reboot-strategy: off
+
+  etcd2:
+
+    proxy: on
+
+      # cluster endpoints
+    listen-client-urls: http://0.0.0.0:2379
+    initial-cluster: etcd-n1=http://192.168.0.1:2380,etcd-n2=http://192.168.0.2:2380,etcd-n3=http://192.168.0.3:2380
+
+  fleet:
+      metadata: "role=kube-node,vlan=7,vlan-7=true"
+
+  units:
+
+    - name: etcd2.service
+      command: start
+    - name: fleet.service
+      command: start
+    - name: docker.service
+      drop-ins:
+        - name: 10-docker-opts.conf
+          content: |
+            [Service]
+            # Setting max log size to 10M
+            Environment="DOCKER_OPTS=--log-driver=json-file --log-opt max-size=10m"
+    - name: early-docker.service
+      drop-ins:
+        - name: 10-docker-opts.conf
+          content: |
+            [Service]
+            # Setting max log size to 10M
+            Environment="DOCKER_OPTS=--log-driver=json-file --log-opt max-size=10m"

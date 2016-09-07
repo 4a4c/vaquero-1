@@ -1,0 +1,12 @@
+---
+id: cc-nodes
+name: Etcd Cluster
+
+operating_system: coreos-1053.2.0-stable
+
+unattended:
+  type: cloud-config
+  use: cc-test.yaml
+
+metadata:
+  fleet_role: cc-test

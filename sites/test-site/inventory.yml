@@ -28,3 +28,9 @@ hosts:
     ipv4_address: 10.10.10.12
     networkd_address: 10.10.10.12/16
     etcd_name: node3
+---
+host_group: cc-nodes
+hosts:
+- name: host10
+  selectors:
+    mac: 00:00:00:00:00:010
