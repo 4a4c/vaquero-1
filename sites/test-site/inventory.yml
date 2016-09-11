@@ -33,4 +33,10 @@ host_group: cc-nodes
 hosts:
 - name: host10
   selectors:
-    mac: 00:00:00:00:00:010
+    mac: 00:00:00:00:00:10
+---
+host_group: kick-nodes
+hosts:
+- name: host20
+  selectors:
+    mac: 00:00:00:00:00:20
